@@ -172,7 +172,13 @@ renamed_models = {
     # odoo
     "calendar.contacts": "calendar.filters",
     "mail.moderation": "mail.group.moderation",
-    # OCA/...
+    # OCA/commission
+    "sale.commission": "commission",
+    "sale.commission.section": "commission.section",
+    "sale.commission.settlement": "commission.settlement",
+    "sale.commission.settlement.line": "commission.settlement.line",
+    "sale.commission.make.invoice": "commission.make.invoice",
+    "sale.commission.make.settle": "commission.make.settle",
 }
 
 # only used here for upgrade_analysis
