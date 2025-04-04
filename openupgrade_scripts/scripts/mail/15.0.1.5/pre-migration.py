@@ -316,11 +316,9 @@ def migration_to_mail_group(env):
 
 @openupgrade.migrate()
 def migrate(env, version):
-    _delete_mail_channel_partner_duplicate_records(env)
     _copy_columns(env)
     _rename_fields(env)
     _rename_tables(env)
-    _add_follwers_from_mail_channel(env)
     _delete_channel_follower_records(env)
     delete_obsolete_constraints(env)
     merge_duplicated_mail_channel_partner_records(env)
