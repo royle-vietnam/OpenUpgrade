@@ -69,6 +69,23 @@ def update_uninstallable_modules_state(cr):
             (tuple(uninstallable_modules),),
         )
 
+_models_renames = [
+    ("sale.commission", "commission"),
+    ("sale.commission.section", "commission.section"),
+    ("sale.commission.settlement", "commission.settlement"),
+    ("sale.commission.settlement.line", "commission.settlement.line"),
+    ("sale.commission.make.invoice", "commission.make.invoice"),
+    ("sale.commission.make.settle", "commission.make.settle"),
+]
+_tables_renames = [
+    ("sale_commission", "commission"),
+    ("sale_commission_section", "commission_section"),
+    ("sale_commission_settlement", "commission_settlement"),
+    ("sale_commission_settlement_line", "commission_settlement_line"),
+    ("sale_commission_make_invoice", "commission_make_invoice"),
+    ("sale_commission_make_settle", "commission_make_settle"),
+]
+
 
 @openupgrade.migrate(use_env=False)
 def migrate(cr, version):
@@ -90,6 +107,9 @@ def migrate(cr, version):
 
     openupgrade.rename_xmlids(cr, rename_xmlids_l10n_ec)
     openupgrade.rename_xmlids(cr, rename_xmlids_mail)
+
+    openupgrade.rename_models(cr, _models_renames)
+    openupgrade.rename_tables(cr, _tables_renames)
 
     openupgrade.clean_transient_models(cr)
     openupgrade.convert_field_to_html(
