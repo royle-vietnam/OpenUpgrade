@@ -68,6 +68,11 @@ merged_modules = {
     "web_chatter_position": "web",
     "web_listview_range_select": "web",
     "web_pwa_oca": "web",
+    "web_domain_field": "web",
+    "oi_partner_employee": "hr_contract",
+    "to_org_chart": "web_hierarchy",
+    "to_maintenance_approval": "to_approvals",
+    "viin_analytic_tag": "account",
     # OCA/...
     # Viindoo/tvtmaaddons
     "to_location_warehouse": "viin_stock",

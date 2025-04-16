@@ -83,6 +83,8 @@ def _check_field_paths(self, node, field_paths, model_name, use):
         )
     except UnboundLocalError:  # pylint: disable=except-pass
         pass
+    except Exception:
+        pass
 
 
 _check_xml._original_method = View._check_xml

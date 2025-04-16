@@ -226,3 +226,13 @@ def migrate(cr, version):
     _fill_ir_server_object_lines_into_action_server(cr)
     _fill_empty_country_codes(cr)
     _handle_partner_private_type(cr)
+    openupgrade.logged_query(
+        cr,
+        f"""
+        UPDATE ir_model_data set name = 'group_budget_admin' WHERE name='group_budget_manager' AND module='to_account_budget';
+        UPDATE ir_model_data set name = 'group_approval_admin' WHERE name='group_approval_manager' AND module='to_approvals';
+        UPDATE ir_model_data set name = 'group_okr_admin' WHERE name='group_okr_manager' AND module='to_okr';
+        UPDATE ir_model_data set name = 'document_group_admin' WHERE name='document_group_manager' AND module='viin_document';
+        UPDATE ir_model_data set name = 'group_helpdesk_admin' WHERE name='group_helpdesk_manager' AND module='viin_helpdesk';
+        """,
+    )
