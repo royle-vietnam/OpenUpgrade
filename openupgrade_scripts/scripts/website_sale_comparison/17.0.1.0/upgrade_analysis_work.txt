@@ -4,5 +4,10 @@
 NEW ir.model.access: website_sale_comparison.access_product_attribute_category_public_employee
 NEW ir.model.access: website_sale_comparison.access_product_attribute_category_public_portal
 NEW ir.model.access: website_sale_comparison.access_product_attribute_category_public_public
+<<<<<<< HEAD
+=======
+# NOTHING TO DO: new feature
+
+>>>>>>> refs/remotes/OCA/17.0
 DEL ir.model.access: website_sale_comparison.access_product_attribute_category_public
 # NOTHING TO DO

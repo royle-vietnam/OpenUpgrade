@@ -3,4 +3,8 @@
 ---XML records in module 'website_form_project'---
 NEW ir.ui.view: website_form_project.website_portal_my_project
 NEW ir.ui.view: website_form_project.website_portal_my_task
+<<<<<<< HEAD
 # NOTHING TO DO
+=======
+# NOTHING TO DO: New feature
+>>>>>>> refs/remotes/OCA/17.0
