@@ -46,7 +46,7 @@ def _transfer_employee_private_data(env):
             street2 = '***',
             zip = '***'
         FROM hr_employee he
-        WHERE he.address_home_id = rp.id""",
+        WHERE he.address_home_id = rp.id AND rp.type = 'private'""",
     )
 
 

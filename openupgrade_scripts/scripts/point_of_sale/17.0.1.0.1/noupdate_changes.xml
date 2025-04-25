@@ -1,11 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <odoo>
-<<<<<<< HEAD
-  <!--
-  <record id="0_01" model="pos.bill" forcecreate="0">
-=======
   <!--<record id="0_01" model="pos.bill" forcecreate="0">
->>>>>>> refs/remotes/OCA/17.0
     <field name="pos_config_ids"/>
   </record>
   <record id="0_02" model="pos.bill" forcecreate="0">
@@ -49,12 +44,7 @@
   </record>
   <record id="5_00" model="pos.bill" forcecreate="0">
     <field name="pos_config_ids"/>
-<<<<<<< HEAD
-  </record>
-  -->
-=======
   </record>-->
->>>>>>> refs/remotes/OCA/17.0
   <record id="product_product_consumable" model="product.product">
     <field name="available_in_pos">True</field>
   </record>
