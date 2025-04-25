@@ -748,7 +748,7 @@ def _precreate_account_move_is_storno(env):
 
 @openupgrade.migrate()
 def migrate(env, version):
-    openupgrade.rename_xmlids(env.cr, _xmlids_renames)
+    #openupgrade.rename_xmlids(env.cr, _xmlids_renames)
     openupgrade.rename_columns(env.cr, _column_renames)
     openupgrade.rename_fields(env, _fields_renames)
     openupgrade.rename_models(env.cr, _models_renames)

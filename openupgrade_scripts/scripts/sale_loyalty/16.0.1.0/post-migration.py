@@ -31,7 +31,7 @@ def fill_code_enabled_rule_ids_from_sale_order(env):
         FROM loyalty_card lc
         JOIN loyalty_rule lr ON lc.program_id = lr.program_id
         JOIN loyalty_program lp ON lr.program_id = lp.id
-        WHERE lr.mode = 'with_code'
+        WHERE lr.mode = 'with_code' AND lc.order_id IS NOT NULL
         """,
     )
 

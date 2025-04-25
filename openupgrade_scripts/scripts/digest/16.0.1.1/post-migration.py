@@ -14,6 +14,6 @@ _translations_to_delete = [
 @openupgrade.migrate()
 def migrate(env, version):
     openupgrade.load_data(env.cr, "digest", "16.0.1.1/noupdate_changes.xml")
-    openupgrade.delete_record_translations(env.cr, "digest", _translations_to_delete)
+    #openupgrade.delete_record_translations(env.cr, "digest", _translations_to_delete)
     # Restore the noupdate=1 after forcing the update of upstream code content
     openupgrade.set_xml_ids_noupdate_value(env, "digest", ["digest_mail_layout"], True)

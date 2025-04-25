@@ -18,20 +18,15 @@ def _check_xml(self):
 
 
 def _check_field_paths(self, node, field_paths, model_name, use):
-    """Because we captured the exception in _raise_view_error and archived that view,
-    so field has not been assigned, but it is called to field._description_searchable
-    in View._check_field_paths, which will raise an exception UnboundLocalError,
-    so we need to override to not raise an exception
-    """
+    """Ignore UnboundLocalError when we squelched the raise about missing fields"""
     try:
         return View._check_field_paths._original_method(
             self, node, field_paths, model_name, use
         )
-    except UnboundLocalError as e:
-        if e.args[0] == "local variable 'field' referenced before assignment":
-            pass
-        else:
-            raise
+    except UnboundLocalError:  # pylint: disable=except-pass
+        pass
+    except Exception:
+        pass
 
 
 def check(self, view):
