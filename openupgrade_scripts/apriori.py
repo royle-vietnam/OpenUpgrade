@@ -24,6 +24,7 @@ renamed_modules = {
     "project_milestone": "project_task_milestone",
     "project_stage_state": "project_task_stage_state",
     "sale_project_service_tracking_copy_tasks": "sale_project_copy_tasks",
+    "sale_commission_formula": "commission_formula",
     # OCA/sale-promotion
     "sale_coupon_chatter": "coupon_chatter",
     "sale_coupon_commercial_partner_applicability": "coupon_commercial_partner_applicability",
@@ -70,6 +71,8 @@ renamed_modules = {
 # Merged modules contain a mapping from old module names to other,
 # preexisting module names
 merged_modules = {
+    "website_crm_score": "tt_crm",
+    "website_editor_unsanitize_html_field": "website",
     # odoo
     "account_edi_extended": "account_edi",
     "l10n_be_invoice_bba": "l10n_be",
@@ -84,6 +87,8 @@ merged_modules = {
     "website_event_track_exhibitor": "website_event_exhibitor",
     "website_form": "website",
     "website_sale_management": "website_sale",
+    "auth_oauth_keycloak": "auth_oauth",
+    "oh_employee_creation_from_user": "hr",
     # odoo/design-themes
     "website_animate": "website",
     # odoo/enterprise
